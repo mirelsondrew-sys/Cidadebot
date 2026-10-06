@@ -35,9 +35,8 @@ import {
   welcomeBonus,
   workCooldownMs,
   workSalary,
-} from "./database.js";
+} from "./economy.js";
 
-  
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
 }
