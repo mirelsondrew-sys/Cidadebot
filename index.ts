@@ -35,9 +35,8 @@ import {
   welcomeBonus,
   workCooldownMs,
   workSalary,
-const chromiumPath = process.env.CHROMIUM_PATH || "";
-}
-
+} // Apenas fecha a chaveta aqui! Apague o "const chromiumPath" da linha 38.
+  
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
 }
