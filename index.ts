@@ -36,6 +36,15 @@ import {
   workCooldownMs,
   workSalary,
 } from "./economy.js";
+// --- CONFIGURAÇÕES DO BOT (RECOLOCADAS) ---
+const pairingPhone = process.env.PAIRING_PHONE || "";
+const authPath = "./session"; 
+const JsonStore = { open: async () => ({ state: { mainGroupId: "", mainGroupTimezone: "" }, save: async () => {} }) }; // Ajuste se usar uma biblioteca específica para a store
+const configuredGroupId = process.env.GROUP_ID || "";
+const timezone = process.env.TIMEZONE || "America/Sao_Paulo";
+type MemberProfile = any;
+type PendingInvitation = any;
+// ------------------------------------------
 
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
