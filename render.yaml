@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cidadebot
+    runtime: node
+    plan: free
+    buildCommand: npm install --no-shrinkwrap --no-audit --no-fund && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: CHROMIUM_PATH
+        value: /usr/bin/google-chrome-stable
+      - key: BOT_TIMEZONE
+        value: Africa/Luanda
