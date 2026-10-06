@@ -36,6 +36,7 @@ import {
   workCooldownMs,
   workSalary,
 const chromiumPath = process.env.CHROMIUM_PATH || "";
+}
 
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
