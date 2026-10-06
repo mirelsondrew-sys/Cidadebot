@@ -35,7 +35,8 @@ import {
   welcomeBonus,
   workCooldownMs,
   workSalary,
-} // Apenas fecha a chaveta aqui! Apague o "const chromiumPath" da linha 38.
+} from "./database.js";
+
   
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
