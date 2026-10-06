@@ -35,19 +35,7 @@ import {
   welcomeBonus,
   workCooldownMs,
   workSalary,
-} from "./economy.js";
-import {
-  calendarImagePath,
-  JsonStore,
-  packageDirectory,
-  type MemberProfile,
-  type PendingInvitation,
-} from "./state.js";
-
-const timezone = process.env.BOT_TIMEZONE?.trim() || "Africa/Luanda";
-const configuredGroupId = process.env.BOT_GROUP_ID?.trim();
-const pairingPhone = process.env.PAIRING_PHONE?.replace(/\D/g, "") || "";
-const authPath = resolve(packageDirectory, ".wwebjs_auth");
+const chromiumPath = process.env.CHROMIUM_PATH || "";
 
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
