@@ -39,7 +39,7 @@ import {
 // --- CONFIGURAÇÕES DO BOT (RECOLOCADAS) ---
 const pairingPhone = process.env.PAIRING_PHONE || "";
 const authPath = "./session"; 
-const JsonStore = { open: async () => ({ state: { mainGroupId: "", mainGroupTimezone: "" }, save: async () => {} }) }; // Ajuste se usar uma biblioteca específica para a store
+const JsonStore = { open: async () => ({ state: { mainGroupId: process.env.GROUP_ID || "", mainGroupTimezone: process.env.TIMEZONE || 'Africa/Luanda' } as any }) }
 const configuredGroupId = process.env.GROUP_ID || "";
 const timezone = process.env.TIMEZONE || "America/Sao_Paulo";
 type MemberProfile = any;
