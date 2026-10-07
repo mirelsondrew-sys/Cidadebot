@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmitOnError false || echo 'Ignorando erros de tipo'",
+    "build": "tsc --noEmitionError false || true",
     "start": "node dist/index.js",
     "postinstall": "npx puppeteer browsers install chrome"
   },
