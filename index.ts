@@ -38,14 +38,24 @@ import {
 } from "./economy.js";
 // --- CONFIGURAÇÕES DO BOT (RECOLOCADAS) ---
 const pairingPhone = process.env.PAIRING_PHONE || "";
-const authPath = "./session"; 
- const JsonStore = { open: async () => ({ state: { mainGroupId: process.env.GROUP_ID || "", mainGroupTimezone: process.env.TIMEZONE || 'Africa/Luanda', users: [] as any[] } as any }), save: async () => {}, getOrCreateProfile: () => ({} as any) } as any;
+const authPath = "./session";
+const timezone = process.env.TIMEZONE || 'Africa/Luanda';
 const configuredGroupId = process.env.GROUP_ID || "";
-const timezone = process.env.TIMEZONE || "America/Sao_Paulo";
+const JsonStore: any = { 
+  open: async () => ({ 
+    state: { 
+      mainGroupId: configuredGroupId, 
+      mainGroupTimezone: timezone, 
+      users: [] as any[] 
+    } as any 
+  }), 
+  save: async () => {}, 
+  getOrCreateProfile: () => ({} as any) 
+};
+
 type MemberProfile = any;
 type PendingInvitation = any;
-// ------------------------------------------
-
+// ------------------------------------------//
 if (pairingPhone && (pairingPhone.length < 8 || pairingPhone.length > 15)) {
   throw new Error("PAIRING_PHONE deve conter o indicativo internacional e apenas dígitos.");
 }
