@@ -13,7 +13,8 @@
     "useUnknownInCatchVariables": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": false
   },
   "include": ["index.ts"]
 }
